@@ -1,5 +1,5 @@
 //create an array to store the words
-var arrayOfWords = ["JAVA","CSHARP","JAVASCRIPT","PYTHON","PHP","HTML","CSS"];
+var arrayOfWords = ["JAVA","JAVASCRIPT","PYTHON","PHP","HTML"];
 var rand = Math.floor(Math.random() * arrayOfWords.length);
 var word;
 var remainingCharacters;
@@ -22,18 +22,18 @@ function reset(){
   $('.hangman-items').css({"display":"none"});
   $(".win").css({"opacity":"0"});
   $(".lost").css({"opacity":"0"});
+  $("#lostModal").css("display", "none");
   lives = 10;
   $("h3").html("You have: " + lives + " lives left");
-  remainingCharacters = 0;
   correctChars = 0;
   parts = 0;
   rand = Math.floor(Math.random() * arrayOfWords.length);
-  word= arrayOfWords[rand];
+  word = arrayOfWords[rand];
   remainingCharacters = word.length;
   $(".word").html('');
-  for (var i = 0; i <=remainingCharacters; i++) {//update the box with a space and underline for every remaining character
+  for (var i = 0; i <remainingCharacters; i++) {//update the box with a space and underline for every remaining character
       var content = $(".word").html();
-      $(".word").html(content+' _ ');
+      $(".word").html(content+' _');
     }
 }
 
@@ -46,9 +46,10 @@ function updateDisplay() {
 
   $(".word").html(updateContent);//set box to show the character player got correct
   console.log('Updating this amount of chars '+remainingCharacters);
+
   for (var i = 0; i <remainingCharacters; i++) {//update the box with a space and underline for every remaining character
       var content = $(".word").html();
-      $(".word").html(content+' _ ');
+      $(".word").html(content+' _');
     }
 }
 
@@ -64,9 +65,8 @@ function matchWordCharsToClick(){
       if (remainingCharacters==0) {
             console.log("You win!");
             $(".win").fadeTo('slow',1,function(){});
-
         }
-          //If the guess is wrong, a body part is added and score is decreased by 1.
+          //If the guess is wrong, a body part is added and score is //decreased by 1.
           }else if (clickedCharacter != currentCharacter) {
               lives--;
               parts++;
@@ -74,27 +74,54 @@ function matchWordCharsToClick(){
               $("h3").html("You have: " + lives + " lives left");
 
               if (lives == 0){
-                // $("h2").html("You lost!");
-                // $(".lost").css({"display":"block"});
-                // $("h2").css({"color": "red"});
                 $(".lost").fadeTo('slow',1,function(){});
+                $("#lostModal").css("display", "block");
         }
       }
   });
 }
 
-
 $(document).ready(function(){
+
+  // for (var i = 0; i <remainingCharacters; i++) {//update the box with a space and underline for every remaining character
+  //     var content = $(".word").html();
+  //     $(".word").html(content+' _ ');
+  //   }
+
   console.log("Dom loaded");
-  reset();
+  $("#myModal").css("display","block");
+
+
+  $( "#closeInstructions" ).click(function() {
+    $("#myModal").css("display", "none");
+  });
+
+  $( "#closeGameOver" ).click(function() {
+    $("#lostModal").css("display", "none");
+  });
+
+  $( "#myModal" ).click(function() {
+    $("#myModal").css("display", "none");
+  });
+
+  $( "#lostModal" ).click(function() {
+    $("#lostModal").css("display", "none");
+  });
+
+  $( ".modal-content").click(function() {
+    event.stopPropagation();
+  });
+
+
+
+  // $( ".close" ).click(function() {
+  //   $("#lostModal").hide();
+  // });
+
+  // $( ".close" ).click(function() {
+  //   $("#wonModal").hide();
+  // });
+  
   matchWordCharsToClick();
-
-
-  //Select a random word from the array and display underlines for the length of the word
-    //Select word from the array
-
-    //Display word to screen
-
-    //Underline characters for the length of the word
-
+  reset();
 });

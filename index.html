@@ -5,13 +5,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet">
+
     <title>Hangman</title>
   </head>
+  
   <body>
     <h1>Hangman - Game Project</h1>
 
     <h3>You have 10 lives left</h3>
     <h4>Clue: Computer Programming Langauges</h4>
+
+    <div class="reset-button">
+      <button class="button" type="button" onclick="reset()" name="button">Reset</button>
+    </div>
+
     <div class="hangman">
 
       <div class="scaff">
@@ -32,21 +40,21 @@
         <div class="legs">
           <div class="leftleg hangman-items"></div>
           <div class="rightleg hangman-items"></div>
-          <div class="pelvis hangman-items"></div>
+          <div class="hangman-items pelvis"></div>
         </div>
       </div>
       <div class="scaffold-base"></div>
     </div>
     <div class="floor"></div>
 
-    <h2 class="win">You win!</h2>
-    <h2 class="lost">You lost!</h2>
+    <h2 align="center" class="win">You win!</h2>
+    <h2 align="center" class="lost">You lost!</h2>
 
     <div class="word"></div>
 
-    <div class="reset-button">
+    <!-- <div class="reset-button">
       <button type="button" onclick="reset()" name="button">Reset</button>
-    </div>
+    </div> -->
 
     <div class="alphabet">
       <div class="letters">A</div>
@@ -76,5 +84,31 @@
       <div class="letters">Y</div>
       <div class="letters">Z</div>
     </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span id="closeInstructions"class="close">&times;</span>
+        <p><b>Instructions</b></p>
+        <hr>
+        <p>Welcome to Hangman - the HARD version. You have to guess the letters in the order the word is spelled.</p>
+        <p>You have 10 lives. Click X on this window to get started.</p>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="lostModal" class="modal">
+
+      <div class="modal-content">
+        <span id="closeGameOver"class="close">&times;</span>
+        <p><b>Game Over</b></p>
+        <hr>
+        <p>You have lost! Click reset to try again.</p>
+        <div class="reset-button">
+          <button type="button" onclick="reset()" name="button">Reset</button>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
