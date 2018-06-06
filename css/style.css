@@ -2,13 +2,26 @@
   font-family: sans-serif;
   background-color: yellow;
 }
+
 h1{
   text-align: center;
 }
 
-h2{
+h4{
+  color: grey;
+}
+/* h2{
   display: none;
   color: green;
+} */
+
+.win{
+  opacity: 0;
+  color: green;
+}
+.lost{
+  opacity: 0;
+  color: red;
 }
 
 .hangman{
@@ -125,8 +138,8 @@ h2{
   display: flex;
   border: 4px solid black;
   margin: 0 auto;
-  width: 150px;
-  height: 100px;
+  width: 20%;
+  height: 60px;
 }
 
 .alphabet{
