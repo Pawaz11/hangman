@@ -2,24 +2,39 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script type="text/javascript"  src="js/main.js"></script>
+
     <link rel="stylesheet" href="css/style.css">
+
     <link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet">
+
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+
+    <link rel="stylesheet" href="animate.min.css">
 
     <title>Hangman</title>
   </head>
-  
+
   <body>
     <h1>Hangman - Game Project</h1>
 
     <h3>You have 10 lives left</h3>
     <h4>Clue: Computer Programming Langauges</h4>
 
+    <!-- reset/pause/play button -->
     <div class="reset-button">
       <button class="button" type="button" onclick="reset()" name="button">Reset</button>
+
+      <a class="pause-bg" onclick="pauseAud()">Pause Music?</a>
+
+      <a class="play-bg" onclick="playAud()">Play Music?</a>
     </div>
 
+    <!-- hangman created using divs -->
     <div class="hangman">
 
       <div class="scaff">
@@ -47,15 +62,12 @@
     </div>
     <div class="floor"></div>
 
-    <h2 align="center" class="win">You win!</h2>
+    <h2 align="center" class="win animated tada infinite">Congratulations! You win!</h2>
     <h2 align="center" class="lost">You lost!</h2>
 
+    <!-- Word display box -->
     <div class="word"></div>
-
-    <!-- <div class="reset-button">
-      <button type="button" onclick="reset()" name="button">Reset</button>
-    </div> -->
-
+<!-- on screen characters -->
     <div class="alphabet">
       <div class="letters">A</div>
       <div class="letters">B</div>
@@ -89,26 +101,43 @@
       <!-- Modal content -->
       <div class="modal-content">
         <span id="closeInstructions"class="close">&times;</span>
-        <p><b>Instructions</b></p>
+        <p><b>Instructions for Hangman - the HARD version</b></p>
         <hr>
-        <p>Welcome to Hangman - the HARD version. You have to guess the letters in the order the word is spelled.</p>
-        <p>You have 10 lives. Click X on this window to get started.</p>
+        <p>Welcome to Hangman - the HARD version.<br>You have to guess the letters of the word in the order the word is spelled.<br> You have 10 lives.<br>You win if you successfully guess all the letters within the 10 lives given... Otherwise you lose. <br><br> Can you do you it?! GOOD LUCK.<br><br><br>Click X on this window to get started.</p>
       </div>
     </div>
 
-    <!-- The Modal -->
+    <!-- The lost Modal -->
     <div id="lostModal" class="modal">
 
       <div class="modal-content">
         <span id="closeGameOver"class="close">&times;</span>
         <p><b>Game Over</b></p>
         <hr>
-        <p>You have lost! Click reset to try again.</p>
+        <p>Unfortunately, you have lost! <br><br>Would you like to try again? Click the Reset.</p>
         <div class="reset-button">
           <button type="button" onclick="reset()" name="button">Reset</button>
         </div>
       </div>
     </div>
+    <!--Audio files -->
+    <audio id="bgAudio">
+        <source src="multimedia/hangman-bg-music.ogg" type="audio/ogg">
+    </audio>
+
+    <audio id="clickAud">
+      <source src="multimedia/click-sound.ogg" type="audio/ogg">
+    </audio>
+
+    <audio id="gameOver">
+      <source src="multimedia/game-over.wav" type="audio/wav">
+    </audio>
+
+    <audio id="winApplause">
+      <source src="multimedia/win-applause.ogg" type="audio/ogg">
+    </audio>
+
+
 
   </body>
 </html>

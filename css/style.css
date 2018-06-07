@@ -1,16 +1,37 @@
 html{
   font-family: 'Frijole', cursive;
   background-color: yellow;
+  animation-name: bg-animation;
+  animation-duration: 40s;
+}
+
+@keyframes bg-animation {
+    0%   {background-color: yellow;}
+    25%  {background-color: #FFE143;}
+    50%  {background-color: #FFC771;}
+    75% {background-color: #FFB897}
+    100% {background-color: yellow;}
 }
 
 h1{
   text-align: center;
-  text-shadow: 1px 1px;
-  /* box-shadow: 2px 2px; */
+  text-shadow: .5px .5px;
+  font-size: 35px;
+  color: black;
 }
 
 h4{
   color: grey;
+}
+
+.play-bg:hover{
+  cursor: pointer;
+
+}
+
+.pause-bg{
+  cursor: pointer;
+
 }
 
 .win{
@@ -161,8 +182,12 @@ h4{
   padding: 5px;
   margin: 2px;
   display: inline-block;
-  font-size: 50px;
+  font-size: 20px;
   border: 3px solid black;
+}
+
+.letters: hover{
+  box-shadow: 10px;
 }
 
 
@@ -170,9 +195,20 @@ h4{
   padding: 5px;
   background-color: black;
   color: yellow;
+  font-size: 20px;
 }
 
-/* The Modal (background) */
+.pause-bg{
+  font-size: 13px;
+  border: .5px solid black;
+}
+
+.play-bg{
+  font-size: 13px;
+  border: .5px solid black;
+}
+
+/* The Modal background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
