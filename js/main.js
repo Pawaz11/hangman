@@ -72,7 +72,7 @@ function matchWordCharsToClick(){
       if (remainingCharacters==0) {
             console.log("You win!");
             $(".win").fadeTo('slow',1,function(){});
-            bgAudio.pause();
+            pauseAud();
             winApplauseSound();
         }
           //If the guess is wrong, a body part is added and score is decreased by 1.

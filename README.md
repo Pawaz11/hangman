@@ -23,13 +23,10 @@ Sparta HTML, CSS and Javascript game project
 <b>Challenges:<br></b>
 Initially faced issues setting up the update function where the underscores had to be placed for the length of the character. With a bit of research and help from a colleague I managed to sort it out.<br>
 
-Still issues with playing the sound when the player wins/loses.<br>
-
 The reset function was not generating a new word from the array so I had to initiate the random generator in the reset functions.
 
 <b>Improvements</b><br>
 <li>Make difficulty levels: Easy Medium and Hard<br></li>
-<li>Play audio when the user wins or loses<br></li>
 <li>Use the keyboard rather than having onscreen input only</li>
 <li>Display the word if the user doesn't guess it right</li>
 <li>Decorate the modals which show instructions and when the player loses</li>
