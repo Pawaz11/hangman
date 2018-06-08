@@ -1,5 +1,5 @@
 //create an array to store the words
-var arrayOfWords = ["JAVA","JAVASCRIPT","PYTHON","PHP","HTML"];
+var arrayOfWords = ["JAVA","JAVASCRIPT","PYTHON","PHP","HTML","CSS"];
 var rand = Math.floor(Math.random() * arrayOfWords.length);
 var word;
 var remainingCharacters;
@@ -72,10 +72,9 @@ function matchWordCharsToClick(){
       if (remainingCharacters==0) {
             console.log("You win!");
             $(".win").fadeTo('slow',1,function(){});
-            pauseAud();
             winApplauseSound();
         }
-          //If the guess is wrong, a body part is added and score is //decreased by 1.
+          //If the guess is wrong, a body part is added and score is decreased by 1.
           }else if (clickedCharacter != currentCharacter) {
               lives--;
               parts++;
@@ -93,21 +92,21 @@ function matchWordCharsToClick(){
   });
 }
 //Audio controls
-function playAud() {
-    bgAudio.play();
-}
-function pauseAud() {
-    bgAudio.pause();
-}
-function clickAudio(){
-  clickAud.play();
-}
-function gameOverSound(){
-  gameOverAud.play();
-}
-function winApplauseSound(){
-  winApplauseAud.play();
-}
+  function playAud() {
+      bgAudio.play();
+    }
+    function pauseAud() {
+      bgAudio.pause();
+    }
+    function clickAudio(){
+      clickAud.play();
+    }
+    function gameOverSound(){
+      gameOverAud.play();
+    }
+    function winApplauseSound(){
+      winApplauseAud.play();
+    }
 
 
 $(document).ready(function(){
@@ -125,7 +124,7 @@ $(document).ready(function(){
 
 
   console.log("Dom loaded");
-  
+
   $("#myModal").css("display","block");
 
 

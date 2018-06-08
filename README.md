@@ -4,11 +4,36 @@ Sparta HTML, CSS and Javascript game project
 <b>Game instructions:</b>
 <p>Welcome to Hangman - the HARD version.<br>You have to guess the letters of the word in the order the word is spelled.<br> You have 10 lives.<br>You win if you successfully guess all the letters within the 10 lives given... Otherwise you lose. <br><br> Can you do you it?! GOOD LUCK.</p>
 
-<b>How to open:</b>
+<strong>How to open:</strong><br>
 
-1. Open the 'Pawaz11/hangman' repository
-2. Click on the green 'Clone or download'
-3. Click 'Download Zip'
-4. Unzip downloaded folder
-5. Open 'index.html.
-6. Game opens!
+1. Go to https://github.com/Pawaz11/hangman
+2. Open the 'Pawaz11/hangman' repository
+3. Click on the green 'Clone or download' button
+4. Click 'Download Zip'
+5. Unzip downloaded folder
+6. Open 'index.html'
+7. Game opens!
+
+<b>The project:</b><br>
+<li>Include a way of keeping score<br></li>
+<li>Use HTML CSS and JavaScript only<br></li>
+<li>Win/end point of the game<br></li>
+<li>Styling</li>
+
+<b>Challenges:<br></b>
+Initially faced issues setting up the update function where the underscores had to be placed for the length of the character. With a bit of research and help from a colleague I managed to sort it out.<br>
+
+Still issues with playing the sound when the player wins/loses.<br>
+
+The reset function was not generating a new word from the array so I had to initiate the random generator in the reset functions.
+
+<b>Improvements</b><br>
+<li>Make difficulty levels: Easy Medium and Hard<br></li>
+<li>Play audio when the user wins or loses<br></li>
+<li>Use the keyboard rather than having onscreen input only</li>
+<li>Display the word if the user doesn't guess it right</li>
+<li>Decorate the modals which show instructions and when the player loses.</li>
+
+<b>Screenshots</b>
+![Game Screenshot](/Users/tech-a50/Desktop/Screen Shot 2018-06-08 at 11.01.04.png "Game Start")
+![](/Users/tech-a50/Desktop/Screen Shot 2018-06-08 at 11.01.39.png "Game instructions display")
