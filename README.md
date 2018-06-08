@@ -21,9 +21,11 @@ Sparta HTML, CSS and Javascript game project
 <li>Styling</li>
 
 <b>Challenges:<br></b>
-Initially faced issues setting up the update function where the underscores had to be placed for the length of the character. With a bit of research and help from a colleague I managed to sort it out.<br>
+Had issues making a start on the project. The problem was broken down into smaller chunks. The challenge was overcome by adding comments to the document to help tackle the problem in small sections and step by step. <br>
 
-The reset function was not generating a new word from the array so I had to initiate the random generator in the reset functions.
+Initially faced issues setting up the update function where the underscores had to be placed for the length of the character. With a bit of research and help from a colleague the issue was overcome.<br>
+
+The reset function was not generating a new word from the array so I had to initiate the random generator in the reset function. The reset functions basically works like an initiate function.
 
 <b>Improvements</b><br>
 <li>Make difficulty levels: Easy Medium and Hard<br></li>
