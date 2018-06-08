@@ -18,7 +18,7 @@ Sparta HTML, CSS and Javascript game project
 <li>Include a way of keeping score<br></li>
 <li>Use HTML CSS and JavaScript only<br></li>
 <li>Win/end point of the game<br></li>
-<li>Styling</li>
+<li>Styling</li><br>
 
 <b>Challenges:<br></b>
 Had issues making a start on the project. The problem was broken down into smaller chunks. The challenge was overcome by adding comments to the document to help tackle the problem in small sections and step by step. <br>
