@@ -32,8 +32,4 @@ The reset function was not generating a new word from the array so I had to init
 <li>Play audio when the user wins or loses<br></li>
 <li>Use the keyboard rather than having onscreen input only</li>
 <li>Display the word if the user doesn't guess it right</li>
-<li>Decorate the modals which show instructions and when the player loses.</li>
-
-<b>Screenshots</b>
-![Game Screenshot](/Users/tech-a50/Desktop/sdet-training/game-project/hangman-html-css-js/multimedia/Screen Shot 2018-06-08 at 11.01.04.png "Game Start")
-![](/Users/tech-a50/Desktop/sdet-training/game-project/hangman-html-css-js/multimedia/Screen Shot 2018-06-08 at 11.01.39.png "Game instructions display")
+<li>Decorate the modals which show instructions and when the player loses</li>
