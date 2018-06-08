@@ -7,7 +7,7 @@ var correctChars = 0;
 var lives = 0;
 var parts = 0;
 
-//function to delete add parts as a wrong letter is clicked
+//function to add parts as a wrong letter is clicked
 function hanging(){
   var x=0;
   $('.hangman-items').each(function(){
@@ -72,6 +72,7 @@ function matchWordCharsToClick(){
       if (remainingCharacters==0) {
             console.log("You win!");
             $(".win").fadeTo('slow',1,function(){});
+            bgAudio.pause();
             winApplauseSound();
         }
           //If the guess is wrong, a body part is added and score is decreased by 1.
@@ -102,10 +103,10 @@ function matchWordCharsToClick(){
       clickAud.play();
     }
     function gameOverSound(){
-      gameOverAud.play();
+      document.getElementById("gameOver").play();
     }
     function winApplauseSound(){
-      winApplauseAud.play();
+      document.getElementById("winApplause").play();
     }
 
 
@@ -119,8 +120,6 @@ $(document).ready(function(){
   // Audio imports
   var bgAudio = document.getElementById("bgAudio");
   var clickAud = document.getElementById("clickAud");
-  var gameOverAud = document.getElementById("gameOver");
-  var winApplauseAud = document.getElementById("winApplause");
 
 
   console.log("Dom loaded");
