@@ -15,6 +15,7 @@ Sparta HTML, CSS and Javascript game project
 7. Game opens!
 
 <b>The project:</b><br>
+The project was to build a browser game which meets the following requirements:
 <li>Include a way of keeping score<br></li>
 <li>Use HTML CSS and JavaScript only<br></li>
 <li>Win/end point of the game<br></li>

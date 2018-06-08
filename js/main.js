@@ -93,21 +93,21 @@ function matchWordCharsToClick(){
   });
 }
 //Audio controls
-  function playAud() {
-      bgAudio.play();
-    }
-    function pauseAud() {
-      bgAudio.pause();
-    }
-    function clickAudio(){
-      clickAud.play();
-    }
-    function gameOverSound(){
-      document.getElementById("gameOver").play();
-    }
-    function winApplauseSound(){
-      document.getElementById("winApplause").play();
-    }
+function playAud() {
+  bgAudio.play();
+}
+function pauseAud() {
+  bgAudio.pause();
+}
+function clickAudio(){
+  clickAud.play();
+}
+function gameOverSound(){
+  document.getElementById("gameOver").play();
+}
+function winApplauseSound(){
+  document.getElementById("winApplause").play();
+}
 
 
 $(document).ready(function(){
