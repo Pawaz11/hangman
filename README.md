@@ -1,6 +1,8 @@
 # Hangman - The Hard Version
 Sparta HTML, CSS and Javascript game project
 
+Live game Link: https://pawaz11.github.io/hangman/
+
 <b>Game instructions:</b>
 <p>Welcome to Hangman - the HARD version.<br>You have to guess the letters of the word in the order the word is spelled.<br>One button click will only replace 1 character at a time. Same characters with 1 button click will not be replaced.<br> You have 10 lives.<br>You win if you successfully guess all the letters within the 10 lives given... Otherwise you lose. <br><br> Can you do you it?! GOOD LUCK.</p>
 
